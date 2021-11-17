@@ -1,0 +1,15 @@
+{
+    "name": "jaydenireland/unit-tests",
+    "description": "Unit Tests for WordPress",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jayden Ireland",
+            "email": "jayden@jaydenireland.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {"SlackApprove\\": "src/"}
+    }
+}
