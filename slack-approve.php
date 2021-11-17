@@ -62,3 +62,21 @@ $bridge->addRoute('/approve/(?P<id>\d+)', 'GET', function($data) use ($bridge, $
 }, fn() => true);
 
 
+/**
+ * Add Webhook URL to settings
+ */
+$bridge->addAction('admin_init', function() {
+   add_settings_section(
+		'slack_approve_setting_section',
+		'Slack Approve',
+		function () { echo 'WordPress Slack Approve Plugin'; },
+		'general'
+	);
+
+   add_settings_field('slack_approve_webhook_url', 'Slack Approve Webhook URL', function() {
+      echo sprintf(<<<HTML
+         <input name="slack_approve_webhook_url" id="slack_approve_webhook_url" class="regular-text" type="text" value="%s"/>
+      HTML, get_option('slack_approve_webhook_url'));
+   }, 'general', 'slack_approve_setting_section');
+   register_setting('general', 'slack_approve_webhook_url');
+});
