@@ -14,7 +14,7 @@ class SlackClient {
     public function sendMessage(string $text): bool {
         $ch = curl_init();
 
-        curl_setopt($ch, CURLOPT_URL, 'https://hooks.slack.com/services/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');
+        curl_setopt($ch, CURLOPT_URL, $this->webhookURL);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($ch, CURLOPT_POST, 1);
         curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode(compact('text')));
