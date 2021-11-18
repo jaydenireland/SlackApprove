@@ -14,6 +14,7 @@ Since one of the requirements of this project was "the code must be 100% authore
 The bulk of this plugin is in the WordPressBridge namespace, which basically just emulated a limited OOP version of the WordPress Plugin API. If I were to continue work on WordPressBridge, I would love to make it a full MVC framework like [TypeRocket](https://typerocket.com/wordpress-mvc/). 
 
 
+Oh, also I got to play around with php8 so that was nice.  Constructor property promotion is my new favorite.
 
 
 
