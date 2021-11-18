@@ -1,6 +1,6 @@
 # Slack Approval Wordpress Plugin
 
-This is a simple plugin that send a link to a slack to approve a post when a pending review post is saved.
+This is a simple plugin that send a link to a Slack to approve a post when a pending review post is saved.
 
 
 ## Backstory
@@ -20,12 +20,7 @@ The bulk of this plugin is in the WordPressBridge namespace, which basically jus
 
 
 
-
-
-
-
-
-
-
 ---
-This project is not meant to be used in a dev or proudction environment is mostly for fun. It "demonstrates interacting with the WordPress plugin API, object oriented programming and has some basic interaction with the WordPress database".
+This project is not meant to be used in a dev or production environment. It "demonstrates interacting with the WordPress plugin API, object oriented programming and has some basic interaction with the WordPress database".
+Since this was just a demonstration, the link to approve posts that is sent to Slack doesn't even have any authentication. It just takes a post ID and is wide open. 
+I think if I were to include dependencies in this project I would pass a signed jwt with the id to the Slack message.
